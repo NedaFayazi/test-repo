@@ -1,0 +1,89 @@
+:host {
+  outline: 0 none;
+  outline-offset: 0;
+  display: flex;
+  align-items: center;
+  height: var(--item-height);
+  padding-inline: 1rem;
+  justify-content: center;
+  border-radius: 4px;
+
+  &.full-border.ng-invalid.ng-touched {
+    border: 1px solid var(--tamin-color-danger);
+    caret-color: var(--tamin-color-danger);
+
+    &:hover {
+      border-color: var(--tamin-color-danger-tint);
+    }
+
+    &:focus-visible {
+      border-width: 2px;
+    }
+    & > tamin-icon {
+      color: var(--tamin-color-danger) !important;
+    }
+  }
+
+  & > * {
+    outline: 0 none;
+    outline-offset: 0;
+  }
+}
+
+.input-host-unborder:host {
+  display: flex;
+  align-items: center;
+}
+
+.otp-container {
+  display: flex;
+  align-items: center;
+  height: var(--item-height);
+  justify-content: center;
+  direction: ltr;
+  gap: 4px;
+}
+
+.tamin-input {
+  display: flex;
+  text-align: center;
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  outline: none;
+  overflow: inherit;
+  box-sizing: border-box;
+  caret-color: var(--tamin-text-color);
+  z-index: 2;
+  font-size: 0.75rem;
+  border: 1px solid var(--tamin-color-light);
+  color: var(--tamin-text-color);
+  background: transparent;
+}
+
+input.tamin-input:focus {
+  outline: none;
+}
+
+input.tamin-input::placeholder {
+  color: rgba(var(--tamin-text-color-rgb, 0, 0, 0), 0.64);
+}
+
+span.tamin-label-form {
+  font-size: 12px;
+  color: rgba(var(--tamin-text-color-rgb, 0, 0, 0), .64);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-inline-end: 0.5rem;
+  padding-block: 0.5rem;
+  text-align: start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  flex-grow: 1;
+}
+
+
+

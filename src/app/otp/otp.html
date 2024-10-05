@@ -1,0 +1,15 @@
+<span *ngIf="label" class="tamin-label-form">{{ label }}</span>
+<div class="otp-container">
+  <input class="tamin-input"
+         #inputEl
+         *ngFor="let input of inputs.controls; let i = index"
+         (focus)="handleFocus($event)"
+         (blur)="onTouched()"
+         (keydown)="handleKeyPress($event, i)"
+         (input)="handleInput()"
+         (paste)="handlePaste($event, i)"
+         [formControl]="input"
+         [type]="type"
+         autocomplete="off"
+  />
+</div>
