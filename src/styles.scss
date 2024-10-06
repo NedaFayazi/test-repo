@@ -1,1 +1,296 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: light dark;
+
+  /* --tamin-height: 48px; */
+  --tamin-font-family: 'IRANSansX';
+  --tamin-background-color: #ffffff;
+  --tamin-background-color-rgb: 255, 255, 255;
+  --font-size-scale: 1rem;
+  --tamin-text-color: #000000;
+  --tamin-text-color-rgb: 0, 0, 0;
+  --tamin-color-primary: #5b6795;
+  --tamin-color-primary-rgb: 91, 103, 149;
+  --tamin-color-primary-contrast: #ffffff;
+  --tamin-color-primary-contrast-rgb: 255, 255, 255;
+  --tamin-color-primary-shade: #505b83;
+  --tamin-color-primary-tint: #6b76a0;
+
+  --tamin-color-secondary: #71cad1;
+  --tamin-color-secondary-rgb: 113, 202, 209;
+  --tamin-color-secondary-contrast: #000000;
+  --tamin-color-secondary-contrast-rgb: 0, 0, 0;
+  --tamin-color-secondary-shade: #63b2b8;
+  --tamin-color-secondary-tint: #7fcfd6;
+
+  --tamin-color-tertiary: #a7bfdd;
+  --tamin-color-tertiary-rgb: 167, 191, 221;
+  --tamin-color-tertiary-contrast: #000000;
+  --tamin-color-tertiary-contrast-rgb: 0, 0, 0;
+  --tamin-color-tertiary-shade: #93a8c2;
+  --tamin-color-tertiary-tint: #b0c5e0;
+
+  --tamin-color-success: #A0D468;
+  --tamin-color-success-rgb: 160, 212, 104;
+  --tamin-color-success-contrast: #000000;
+  --tamin-color-success-contrast-rgb: 0, 0, 0;
+  --tamin-color-success-shade: #8dbb5c;
+  --tamin-color-success-tint: #aad877;
+
+  --tamin-color-warning: #FCBB42;
+  --tamin-color-warning-rgb: 252, 187, 66;
+  --tamin-color-warning-contrast: #000000;
+  --tamin-color-warning-contrast-rgb: 0, 0, 0;
+  --tamin-color-warning-shade: #dea53a;
+  --tamin-color-warning-tint: #fcc255;
+
+  --tamin-color-danger: #ED5565;
+  --tamin-color-danger-rgb: 237, 85, 101;
+  --tamin-color-danger-contrast: #ffffff;
+  --tamin-color-danger-contrast-rgb: 255, 255, 255;
+  --tamin-color-danger-shade: #d14b59;
+  --tamin-color-danger-tint: #ef6674;
+
+  --tamin-color-medium: #969fab;
+  --tamin-color-medium-rgb: 150, 159, 171;
+  --tamin-color-medium-contrast: #ffffff;
+  --tamin-color-medium-contrast-rgb: 255, 255, 255;
+  --tamin-color-medium-shade: #848c96;
+  --tamin-color-medium-tint: #a1a9b3;
+
+  --tamin-color-light: #f1f4f9;
+  --tamin-color-light-rgb: 241, 244, 249;
+  --tamin-color-light-contrast: #000000;
+  --tamin-color-light-contrast-rgb: 0, 0, 0;
+  --tamin-color-light-shade: #d4d7db;
+  --tamin-color-light-tint: #f2f5fa;
+
+  --tamin-color-dark: #222428;
+  --tamin-color-dark-rgb: 34, 36, 40;
+  --tamin-color-dark-contrast: #ffffff;
+  --tamin-color-dark-contrast-rgb: 255, 255, 255;
+  --tamin-color-dark-shade: #1e2023;
+  --tamin-color-dark-tint: #383a3e;
+
+}
+
+
+:root {
+  --speed: 0.65s;
+  --update: 0s;
+  --timing: linear(
+      0, 0.5007 7.21%, 0.7803 12.29%,
+      0.8883 14.93%, 0.9724 17.63%,
+      1.0343 20.44%, 1.0754 23.44%,
+      1.0898 25.22%, 1.0984 27.11%,
+      1.1014 29.15%, 1.0989 31.4%,
+      1.0854 35.23%, 1.0196 48.86%,
+      1.0043 54.06%, 0.9956 59.6%,
+      0.9925 68.11%, 1
+  );
+  timeline-scope: --thumb;
+}
+
+:root {
+  --selected: hsl(20, 97%, 62%);
+  --transition: 0.875s;
+  --bg: light-dark(white, black);
+  --intentful: light-dark(color-mix(in lch, canvas, canvasText 15%), black);
+  --ease: linear(
+      0 0%,
+      0.6832 7.89%,
+      0.9171 11.07%,
+      1.0251 12.99%,
+      1.1058 14.9%,
+      1.1619 16.86%,
+      1.1945 18.91%,
+      1.2024 20.02%,
+      1.2043 21.18%,
+      1.1907 23.72%,
+      1.1598 26.27%,
+      1.0604 32.59%,
+      1.0172 35.84%,
+      0.9839 39.49%,
+      0.967 43.26%,
+      0.9639 45.77%,
+      0.9661 48.59%,
+      0.9963 60.54%,
+      1.0054 67.42%,
+      1 100%
+  );
+}
+
+
+@supports(animation-timeline: scroll()) {
+  :root {
+    --speed: 0.65s;
+    --update: 0.1s;
+    --timing: linear(
+        0, 0.5007 7.21%, 0.7803 12.29%,
+        0.8883 14.93%, 0.9724 17.63%,
+        1.0343 20.44%, 1.0754 23.44%,
+        1.0898 25.22%, 1.0984 27.11%,
+        1.1014 29.15%, 1.0989 31.4%,
+        1.0854 35.23%, 1.0196 48.86%,
+        1.0043 54.06%, 0.9956 59.6%,
+        0.9925 68.11%, 1
+    );
+    timeline-scope: --thumb;
+  }
+
+  [type="range"]::-webkit-slider-thumb {
+    view-timeline-name: --thumb;
+    view-timeline-axis: inline;
+  }
+}
+
+/* Dark Colors */
+[app-mode='dark'] {
+  --tamin-color-light: #171620;
+  --tamin-color-light-rgb: 38, 37, 50;
+  --tamin-color-light-contrast: #ffffff;
+  --tamin-color-light-contrast-rgb: 255, 255, 255;
+  --tamin-color-light-shade: #21212c;
+  --tamin-color-light-tint: #3c3b47;
+
+  --tamin-color-dark: #f4f5f8;
+  --tamin-color-dark-rgb: 244, 245, 248;
+  --tamin-color-dark-contrast: #000000;
+  --tamin-color-dark-contrast-rgb: 0, 0, 0;
+  --tamin-color-dark-shade: #d7d8da;
+  --tamin-color-dark-tint: #f5f6f9;
+
+  --tamin-background-color: #302f3f;
+  --tamin-background-color-rgb: 18, 18, 18;
+  --tamin-text-color: #ffffff;
+  --tamin-text-color-rgb: 255, 255, 255;
+  --tamin-border-color: #494858;
+
+  --tamin-color-step-50: #353444;
+  --tamin-color-step-100: #3a3949;
+  --tamin-color-step-150: #3f3e4e;
+  --tamin-color-step-200: #444353;
+  --tamin-color-step-250: #494858;
+  --tamin-color-step-300: #4d4c5c;
+  --tamin-color-step-350: #525161;
+  --tamin-color-step-400: #575666;
+  --tamin-color-step-450: #5c5b6b;
+  --tamin-color-step-500: #616070;
+  --tamin-color-step-550: #666575;
+  --tamin-color-step-600: #6b6a7a;
+  --tamin-color-step-650: #706f7f;
+  --tamin-color-step-700: #757484;
+  --tamin-color-step-750: #7a7989;
+  --tamin-color-step-800: #7e7d8d;
+  --tamin-color-step-850: #838292;
+  --tamin-color-step-900: #888797;
+  --tamin-color-step-950: #8d8c9c;
+}
+
+[app-theme='cream'] {
+  --tamin-color-primary: #8D93AB;
+  --tamin-color-primary-rgb: 141, 147, 171;
+  --tamin-color-primary-contrast: #ffffff;
+  --tamin-color-primary-contrast-rgb: 255, 255, 255;
+  --tamin-color-primary-shade: #7c8196;
+  --tamin-color-primary-tint: #989eb3;
+
+  --tamin-color-secondary: #AACFCF;
+  --tamin-color-secondary-rgb: 170, 207, 207;
+  --tamin-color-secondary-contrast: #000000;
+  --tamin-color-secondary-contrast-rgb: 0, 0, 0;
+  --tamin-color-secondary-shade: #96b6b6;
+  --tamin-color-secondary-tint: #b3d4d4;
+
+  --tamin-color-tertiary: #E4D8DC;
+  --tamin-color-tertiary-rgb: 228, 216, 220;
+  --tamin-color-tertiary-contrast: #000000;
+  --tamin-color-tertiary-contrast-rgb: 0, 0, 0;
+  --tamin-color-tertiary-shade: #c9bec2;
+  --tamin-color-tertiary-tint: #e7dce0;
+}
+
+[app-theme='retro'] {
+  --tamin-color-primary: #de7da7;
+  --tamin-color-primary-rgb: 222, 125, 167;
+  --tamin-color-primary-contrast: #ffffff;
+  --tamin-color-primary-contrast-rgb: 255, 255, 255;
+  --tamin-color-primary-shade: #c36e93;
+  --tamin-color-primary-tint: #e18ab0;
+
+  --tamin-color-secondary: #6554AF;
+  --tamin-color-secondary-rgb: 101, 84, 175;
+  --tamin-color-secondary-contrast: #ffffff;
+  --tamin-color-secondary-contrast-rgb: 255, 255, 255;
+  --tamin-color-secondary-shade: #594a9a;
+  --tamin-color-secondary-tint: #7465b7;
+
+  --tamin-color-tertiary: #D5DAEB;
+  --tamin-color-tertiary-rgb: 213, 218, 235;
+  --tamin-color-tertiary-contrast: #000000;
+  --tamin-color-tertiary-contrast-rgb: 0, 0, 0;
+  --tamin-color-tertiary-shade: #bbc0cf;
+  --tamin-color-tertiary-tint: #d9deed;
+}
+
+[app-theme='vintage'] {
+  --tamin-color-primary: #89B9AD;
+  --tamin-color-primary-rgb: 137, 185, 173;
+  --tamin-color-primary-contrast: #ffffff;
+  --tamin-color-primary-contrast-rgb: 255, 255, 255;
+  --tamin-color-primary-shade: #79a398;
+  --tamin-color-primary-tint: #95c0b5;
+
+  --tamin-color-secondary: #ECA869;
+  --tamin-color-secondary-rgb: 236, 168, 105;
+  --tamin-color-secondary-contrast: #000000;
+  --tamin-color-secondary-contrast-rgb: 0, 0, 0;
+  --tamin-color-secondary-shade: #d0945c;
+  --tamin-color-secondary-tint: #eeb178;
+
+  --tamin-color-tertiary: #E3E1D9;
+  --tamin-color-tertiary-rgb: 227, 225, 217;
+  --tamin-color-tertiary-contrast: #000000;
+  --tamin-color-tertiary-contrast-rgb: 0, 0, 0;
+  --tamin-color-tertiary-shade: #c8c6bf;
+  --tamin-color-tertiary-tint: #e6e4dd;
+}
+
+[app-theme='neon'] {
+  --tamin-color-primary: #6563cc;
+  --tamin-color-primary-rgb: 101, 99, 204;
+  --tamin-color-primary-contrast: #ffffff;
+  --tamin-color-primary-contrast-rgb: 255, 255, 255;
+  --tamin-color-primary-shade: #5957b4;
+  --tamin-color-primary-tint: #7473d1;
+
+  --tamin-color-secondary: #B8B5FF;
+  --tamin-color-secondary-rgb: 184, 181, 255;
+  --tamin-color-secondary-contrast: #000000;
+  --tamin-color-secondary-contrast-rgb: 0, 0, 0;
+  --tamin-color-secondary-shade: #a29fe0;
+  --tamin-color-secondary-tint: #bfbcff;
+
+  --tamin-color-tertiary: #AED2FF;
+  --tamin-color-tertiary-rgb: 174, 210, 255;
+  --tamin-color-tertiary-contrast: #000000;
+  --tamin-color-tertiary-contrast-rgb: 0, 0, 0;
+  --tamin-color-tertiary-shade: #99b9e0;
+  --tamin-color-tertiary-tint: #b6d7ff;
+}
+
+[app-scale='small'] {
+  --font-size-scale: 0.8rem;
+
+}
+
+[app-scale='large'] {
+  --font-size-scale: 1.3rem;
+}
+
+.full-border {
+  border: 1px solid rgba(0, 0, 0, 0.13);
+
+  &:hover {
+    border-color: var(--tamin-color-step-750, #404040);
+  }
+}
