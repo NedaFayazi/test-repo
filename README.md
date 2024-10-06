@@ -1,4 +1,4 @@
-# Golab
+# Golab janam ghorbonet beram
 this project is initalized by Golabi
 pay attention to the following instructions
 
